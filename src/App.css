@@ -1,38 +1,66 @@
-.App {
+.title{
+  font-family: system-ui, sans-serif;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.formSection{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.formSection > input{
+  font-size: 20px;
+  padding: 0 1rem;
+  line-height: 2rem;
+  border-radius: 50px;
+  background-color: #fff;
+  margin-right: 20px;
+}
+.formSection > button{
+  font-size: 20px;
+  padding: 0 1rem;
+  line-height: 2rem;
+  border-radius: 50px;
+  background-color: #000;
+  color: #00ffff;
+
+}
+.result{
+  padding: 90px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.result > .card{
+  display: flex;
+}
+.card > a >span> .resultImage{
+  flex: 100% 1;
+  margin-top: 1rem;
+  border-radius: 20px;
+  width: 350px;
+  padding: 10px;
+  cursor: pointer;
+}
+.card > a> .username{
+  text-align: center;
+  font-family: system-ui, sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 501px){
+  .title{
+    font-size: 27px;
   }
-  to {
-    transform: rotate(360deg);
+  .formSection > input{
+    width: 50%;
+    font-size: 12px;
+  }
+  .formSection > button{
+    font-size: 15px;
+  }
+  .result{
+    display: grid;
+    grid-template-columns: auto;
+    padding: 0;
+  }
+  .card> a > span>.resultImage{
+    width: 93%!important;
   }
 }
